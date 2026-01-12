@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Home = require('./models/home');
 
 // MongoDB Atlas connection string
-const DB_PATH = 'mongodb+srv://CRUDABC:CRUDABC@cluster1.vzxjvpm.mongodb.net/airbnb?appName=cluster1';
+const DB_PATH = process.env.MONGODB_URI || "mongodb://localhost:27017/havento";
 
 // Sample data for 15 homes with 4-5 relevant images each
 const sampleHomes = [
