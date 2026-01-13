@@ -7,8 +7,6 @@ import Signup from './pages/auth/Signup';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import ResetPassword from './pages/auth/ResetPassword';
 import VerifyEmail from './pages/auth/VerifyEmail';
-import VerifyPhone from './pages/auth/VerifyPhone';
-import GoogleAuthSuccess from './pages/auth/GoogleAuthSuccess';
 
 import Index from './pages/store/Index';
 import HomeList from './pages/store/HomeList';
@@ -34,10 +32,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/verify-email" element={<VerifyEmail />} />
-            <Route path="/verify-phone" element={<VerifyPhone />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
-            <Route path="/auth/google/success" element={<GoogleAuthSuccess />} />
             <Route path="/homes" element={<HomeList />} />
             <Route path="/homes/:homeId" element={<HomeDetail />} />
             
