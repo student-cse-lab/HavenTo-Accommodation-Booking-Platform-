@@ -22,6 +22,10 @@ const { apiLimiter } = require('./middleware/rateLimiter');
 
 const app = express();
 
+// Trust proxy - required for Render deployment
+app.set('trust proxy', 1);
+
+
 app.use(helmet({
   contentSecurityPolicy: false,
   crossOriginEmbedderPolicy: false
