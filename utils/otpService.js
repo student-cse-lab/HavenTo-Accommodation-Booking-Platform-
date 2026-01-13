@@ -60,13 +60,13 @@ const sendOTPEmail = async (email, otp, firstName) => {
   try {
     await sgMail.send(mailOptions);
     console.log(`✅ OTP email sent successfully to ${email}`);
-    return true;
+    return { success: true };
   } catch (error) {
     console.error('❌ Error sending OTP email:', error.message);
     if (error.response) {
       console.error('SendGrid error details:', error.response.body);
     }
-    throw error;
+    return { success: false, error: error.message };
   }
 };
 
