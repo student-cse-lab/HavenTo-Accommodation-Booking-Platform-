@@ -12,10 +12,10 @@ const sendOTPEmail = async (email, otp, firstName) => {
   const mailOptions = {
     to: email,
     from: {
-      email: process.env.SENDGRID_FROM_EMAIL || 'noreply@havento.com',
+      email: process.env.SENDGRID_FROM_EMAIL || 'saurabhrajput.25072005@gmail.com',
       name: 'HavenTo'
     },
-    replyTo: process.env.SENDGRID_FROM_EMAIL || 'noreply@havento.com',
+    replyTo: process.env.SENDGRID_FROM_EMAIL || 'saurabhrajput.25072005@gmail.com',
     subject: 'Complete your HavenTo registration',
     text: `Hi ${firstName || 'there'},
 
@@ -106,10 +106,10 @@ const sendPasswordResetEmail = async (email, resetToken, firstName) => {
   const mailOptions = {
     to: email,
     from: {
-      email: process.env.SENDGRID_FROM_EMAIL || 'noreply@havento.com',
+      email: process.env.SENDGRID_FROM_EMAIL || 'saurabhrajput.25072005@gmail.com',
       name: 'HavenTo'
     },
-    replyTo: process.env.SENDGRID_FROM_EMAIL || 'noreply@havento.com',
+    replyTo: process.env.SENDGRID_FROM_EMAIL || 'saurabhrajput.25072005@gmail.com',
     subject: 'Reset your HavenTo password',
     text: `Hi ${firstName || 'there'},
 
@@ -212,3 +212,8 @@ module.exports = {
   sendOTPEmail,
   sendPasswordResetEmail
 };
+
+
+
+
+
