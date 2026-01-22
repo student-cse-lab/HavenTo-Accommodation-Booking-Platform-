@@ -1,0 +1,29 @@
+services:
+  # Backend API
+  - type: web
+    name: havento-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://havento.vercel.app
+
+  # Frontend (if you want to deploy on Render instead of Vercel)
+  # - type: web
+  #   name: havento-frontend
+  #   env: static
+  #   region: oregon
+  #   plan: free
+  #   buildCommand: cd client && npm install && npm run build
+  #   staticPublishPath: client/dist
